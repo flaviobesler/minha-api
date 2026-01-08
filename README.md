@@ -10,7 +10,9 @@ projeto simples de controle financeiro pessoal criado usando FastAPI e sqlite pa
 --javascript
 
 #como rodar
+
 no vscode
+
 -- abra o arquivo initdb.py e digite ctrl+'(aspas abaixo do esc), no terminal digite python initdb.py.
 
 --abra o arquivo apy.py e digite uvicorn api:app --reload.
