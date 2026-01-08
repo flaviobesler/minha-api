@@ -1,0 +1,46 @@
+status 404 : not found;
+status 422 : unprocessable Content
+
+
+erro cors: api impediu o acesso por que não não há autorização 
+
+
+
+para iniciar a api: uvicorn api:app --reload
+
+quem cria select, update, insert e delet não é o init_db.py, é a api, o init serve apenas para criar as tabelas.
+
+exemplo mental:
+JS → POST /api/products → api.py → INSERT
+JS → GET  /api/products → api.py → SELECT
+JS → DELETE  /api/products → api.py → DELETE
+JS → PUT ou PATCH  /api/products → api.py → UPDATE
+
+INSERT:
+INSERT INTO products (nome, valor, categoria) VALUES(?, ?, ?)
+
+SELECT:
+'SELECT nome, valor, categoria FROM products'
+
+DELETE:
+DELET FROM products WHERE id = ?", (id,)
+
+UPDATE:
+UPDATE products SET nome=?, valor=?, categoria=? WHERE id=?
+
+
+middleware faz a ponte entre o frontend e a api dando as permissões em:
+(chatGPT):O app está dizendo que aceita requisições vindas do navegador, autorizando quais sites (origins), quais tipos de requisição (methods) e quais informações extras (headers) podem ser usadas
+origins = quem pode acessar (site)
+methods = como pode acessar (requisição)
+headers = com que informações
+
+(chatGPT):
+migrations/ → cria/atualiza tabelas
+models/ → representa dados
+routes/ → define endpoints
+services/ → lógica
+database/ → conexão
+
+Então, cada vez que eu quiser fazer uma função, eu crio uma função assincrona no js e descrevo o method?
+
